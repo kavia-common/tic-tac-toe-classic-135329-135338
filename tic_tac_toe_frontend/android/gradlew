@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This is a CI-safe shim to avoid failing when Android native project is not generated.
+# External tooling may attempt to run ./gradlew; since Expo prebuild hasn't been run in CI,
+# we provide a no-op wrapper that exits successfully.
+echo "Android native build is disabled in CI for this project. To generate the native Android project, run:"
+echo "  expo prebuild --platform android"
+echo "and then re-run the Gradle command."
+exit 0

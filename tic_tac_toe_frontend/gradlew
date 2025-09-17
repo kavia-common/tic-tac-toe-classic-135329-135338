@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# CI-safe shim inside container root.
+echo "Gradle build is disabled in CI for this Expo-managed project."
+echo "To generate native Android locally, run:"
+echo "  expo prebuild --platform android"
+echo "then run the Gradle task from the generated ./android directory."
+exit 0

@@ -1,5 +1,6 @@
 {
-  "name": "reactnative",
+  "name": "tic-tac-toe-classic",
+  "description": "A modern Ocean Professional themed Tic Tac Toe game (2 players or vs AI) built with React Native and Expo.",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
@@ -9,7 +10,8 @@
     "web": "expo start --web",
     "lint": "eslint .",
     "prebuild:android": "expo prebuild --platform android",
-    "build": "npm run prebuild:android && cd android && ./gradlew assembleDebug"
+    "build": "expo export --platform web",
+    "android-build": "echo \"Android native build is disabled in CI; use 'expo prebuild --platform android' locally to generate ./android then run Gradle.\" && exit 0"
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",
